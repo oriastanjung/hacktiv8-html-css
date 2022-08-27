@@ -1,0 +1,161 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+h1{
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 0.9;
+}
+
+p{
+    margin: 0;
+    color: #ababab;
+}
+
+a{
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    color: #ababab;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    border: 1px solid #ababab;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover, a:active, a:focus{
+    background-color: #ababab;
+    color: white;
+}
+
+
+figure{
+    margin: 0;
+}
+
+
+::-moz-selection{
+    color: white;
+    background-color: #939292;
+    text-shadow: none;
+}
+
+::selection{
+    color: white;
+    background-color: #939292;
+    text-shadow: none;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    color: black;
+    background-color: white;
+}
+
+.absolute-bg {
+    height: 100vh;
+    width: 100vh;
+}
+.absolute-bg img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.post {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: ce; */
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+    border: 0.5em solid white;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    padding-top: 0;
+    overflow-y: auto;
+
+}
+.post-time {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    overflow: hidden;
+}
+
+.post-content {
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 35%;
+}
+
+.post-container .post-author{
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-bottom: 10%;
+    font-style: italic;
+    width: 100%;
+    text-decoration: underline;
+}
+@media (max-width : 768px) {
+    body{
+        font-size: 102.5%;
+    }
+    .absolute-bg{
+        height: 50vh;
+        width: 50vh;
+
+    }
+    .post-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .post-time{
+        font-size: 15px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .post-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .absolute-bg img{
+        object-fit: contain;
+        object-position: center;
+    }
+    .post {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        min-height: 40em;
+    }
+
+    .post-text{
+        padding: 0.4em;
+    }
+}
